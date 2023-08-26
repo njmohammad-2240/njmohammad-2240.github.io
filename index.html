@@ -1,123 +1,373 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
-    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
-    <title>Log in</title>
-    <link rel="icon" href="bxs-contact.svg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleHomepage.css" />
+    <link rel="icon" href="icon/coding_1006363.png" />
+    <title>Parto Elm</title>
     <style>
-      @media (min-width: 700px) {
-        body {
-          background-image: url("pexels-javier-gonzalez-1061675.jpg");
-          background-repeat: no-repeat;
-          background-size: 8000px;
-          background-position: center;
-          font-size: 19px;
-          font-weight: bold;
-          color: rgb(63, 49, 10);
-        }
-
-        form {
-          width: 460px;
-          height: 530px;
-          padding: 80px 0px 0px 70px;
-          margin: 262px auto;
-          border-radius: 20px;
-          background-color: rgba(252, 247, 206, 0.5);
-        }
-        .i1,
-        .i2,
-        .i3 {
-          width: 390px;
-          height: 38px;
-          border-radius: 7px;
-          border: 1px solid white;
-        }
-        .i4 {
-          width: 398px;
-          height: 47px;
-          border: 1px solid rgb(132, 0, 255);
-          border-radius: 25px;
-          background-color: rgb(95, 8, 177);
-          color: rgba(255, 255, 255, 1);
-          font-size: 19px;
-        }
-
-        p {
-          padding-left: 75px;
-        }
-
-        a:visited {
-          color: rgb(230, 37, 220);
-        }
-        a:hover {
-          color: rgb(143, 7, 255);
-        }
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      header {
+        font-size: 18px;
+        height: 63px;
+      }
+      .header-list {
+        list-style-type: none;
+        text-align: right;
+      }
+      .header-items {
+        display: inline-block;
+        margin: 25px;
+      }
+      .header-items:hover {
+        color: #d2a28a;
+        border-bottom: 2px solid #8c532c;
+      }
+      a {
+        color: black;
+      }
+      .home-logo {
+        width: 180px;
+        height: 59px;
+        position: absolute;
+        top: 4px;
+        left: 8px;
+        background-image: url("icon/parto-elm-logo.png");
+        background-repeat: no-repeat;
+        background-size: 210px;
+        background-position: center;
+      }
+      .sect1 {
+        height: 820px;
+        background-image: url("img/high-angle-desk-assortment-with-laptop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
 
-      @media (max-width: 699px) {
-        body {
-          background-image: url("pexels-javier-gonzalez-1061675.jpg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          font-size: 17px;
-          font-weight: bold;
-          color: rgb(63, 49, 10);
-        }
+      .title1 {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #f0bb0c;
+        font-size: 55px;
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        top: 260px;
+        left: 250px;
+      }
+      .dec1 {
+        width: 600px;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #30ddc0;
+        font-size: 21px;
+        text-align: center;
+        padding: 15px;
+        position: absolute;
+        top: 445px;
+        left: 360px;
+      }
+      .btn-1 {
+        width: 120px;
+        height: 55px;
+        border: 2px solid black;
+        background-color: rgb(255, 255, 255, 0);
+        color: black;
+        font-weight: bold;
+        font-size: 17px;
+        position: absolute;
+        top: 570px;
+        left: 680px;
+      }
+      .btn-2 {
+        width: 120px;
+        height: 55px;
+        border: 3px solid #f0bb0c;
+        background-color: rgb(255, 255, 255, 0);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 17px;
+        position: absolute;
+        top: 570px;
+        left: 540px;
+      }
 
-        form {
-          width: 350px;
-          height: 460px;
-          padding: 70px 0px 0px 28px;
-          margin: 270px auto;
-          border-radius: 20px;
-          background-color: rgba(252, 247, 206, 0.5);
-        }
-        .i1,
-        .i2,
-        .i3 {
-          width: 320px;
-          height: 33px;
-          border-radius: 10px;
-          border: 1px solid white;
-        }
-        .i4 {
-          width: 325px;
-          height: 40px;
-          border: 1px solid rgb(132, 0, 255);
-          border-radius: 15px;
-          background-color: rgb(95, 8, 177);
-          color: rgba(255, 255, 255, 1);
-          font-size: 19px;
-        }
+      .btn-1:hover {
+        background-color: black;
+        color: white;
+      }
+      .btn-2:hover {
+        border: 3px solid #f0bb0c;
+        background-color: #f0bb0c;
+        color: black;
+      }
 
-        p {
-          padding-left: 70px;
-        }
+      .sect2 {
+        height: 730px;
+        background-color: rgb(230, 230, 198);
+      }
+      .container {
+        width: 600px;
+        height: 400px;
+        background-image: url("img/web-design-concept-with-drawings.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 960px;
+        right: 620px;
+      }
+      .dec2 {
+        width: 500px;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: justify;
+        position: absolute;
+        top: 950px;
+        left: 700px;
+        text-shadow: 2px 2px 20px rgb(119, 112, 112);
+      }
 
-        a:visited {
-          color: rgb(230, 37, 220);
-        }
-        a:hover {
-          color: rgb(143, 7, 255);
-        }
+      #sect3 {
+        height: 750px;
+        background-color: rgb(206, 193, 176);
+        color: rgb(13, 20, 0);
+        position: relative;
+      }
+      #sect3 img {
+        width: 180px;
+        height: 180px;
+        display: block;
+        border-radius: 50%;
+      }
+      .pic1 {
+        position: absolute;
+        top: 80px;
+        left: 100px;
+        box-shadow: 0 0 15px rgb(126, 54, 209);
+      }
+      .pic2 {
+        position: absolute;
+        top: 300px;
+        left: 100px;
+        box-shadow: 0 0 15px rgb(255, 0, 0);
+      }
+      .pic3 {
+        position: absolute;
+        top: 520px;
+        left: 100px;
+        box-shadow: 0 0 15px rgb(24, 207, 7);
+      }
+
+      .about1 {
+        line-height: 23px;
+        font-weight: bold;
+        width: 700px;
+        text-align: justify;
+        position: absolute;
+        top: 110px;
+        left: 500px;
+      }
+      .about2 {
+        line-height: 23px;
+        font-weight: bold;
+        width: 700px;
+        text-align: justify;
+        position: absolute;
+        top: 340px;
+        left: 500px;
+      }
+      .about3 {
+        line-height: 23px;
+        font-weight: bold;
+        width: 700px;
+        text-align: justify;
+        position: absolute;
+        top: 560px;
+        left: 500px;
+      }
+      #footer {
+        height: 200px;
+        background-color: #b49f90;
+        position: relative;
+      }
+      footer img {
+        width: 50px;
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, 0);
+        border-radius: 50%;
+      }
+      .icon-youtube {
+        top: 30px;
+        left: 40px;
+      }
+      .icon-facebook {
+        top: 30px;
+        left: 110px;
+      }
+      .icon-instagram {
+        top: 30px;
+        left: 180px;
+      }
+
+      .foot-list {
+        position: relative;
+        list-style-type: none;
+        font-size: 20px;
+      }
+      .foot-item1:hover {
+        border-bottom: 1px solid;
+      }
+      .foot-item2:hover {
+        border-bottom: 1px solid;
+      }
+      .foot-item3:hover {
+        border-bottom: 1px solid;
+      }
+
+      .foot-item1 {
+        position: absolute;
+        top: 40px;
+        right: 50px;
+      }
+      .foot-item2 {
+        position: absolute;
+        top: 70px;
+        right: 50px;
+      }
+      .foot-item3 {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+      }
+
+      .creat-by {
+        height: 43px;
+        background-color: #584b3c;
+      }
+      span {
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 8px;
+        right: 485px;
+      }
+      .c1 {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top: 5px;
       }
     </style>
   </head>
   <body>
-    <form>
-      <label for="names">User Name :</label><br /><br />
-      <input type="text" id="names" class="i1" required /><br /><br />
-
-      <label for="emails">Email :</label><br /><br />
-      <input type="email" id="emails" class="i2" required /><br /><br />
-
-      <label for="pass">Password :</label><br /><br />
-      <input type="password" id="pass" class="i3" required /><br /><br />
-      <br />
-
-      <input type="submit" value="Log in" class="i4" /><br /><br />
-      <p>create account? <a href="index2.html">Sign up</a></p>
-    </form>
+    <a href="index.html"><div class="home-logo"></div></a>
+    <header>
+      <ul class="header-list">
+        <a href="index.html"><li class="header-items">خانه</li></a>
+        <li class="header-items">آموزش هاي برنامه‌ نویسی</li>
+        <a href="#sect3"><li class="header-items">درباره ما</li></a>
+        <a href="#footer"><li class="header-items">ارتباط با ما</li></a>
+      </ul>
+    </header>
+    <section class="sect1">
+      <h1 class="title1">آموزش برنامه نويسي از مبتدي تا پيشرفته</h1>
+      <p class="dec1">
+        با ما بهترین و محبوب‌ترین منبع آموزش برنامه‌نویسی را دریافت خواهید کرد
+        همراه ما باشید و مهارت‌های برنامه‌نویسی خود را به سطوح جدیدی برسانید.
+      </p>
+      <a href="#sect2" type="button">
+        <button type="button" class="btn-2">آموزش بيشتر</button>
+      </a>
+      <a href="#" type="button">
+        <button type="button" class="btn-1">دوره ها</button>
+      </a>
+    </section>
+    <section class="sect2" id="sect2">
+      <div class="container"></div>
+      <p class="dec2">
+        به طور حرفه‌ای و عمیق در دنیای برنامه‌ نویسی پا نهاده‌اید و اکنون آماده
+        هستید تا به مسیری هیجان‌انگیز و پر از امکانات جدید بپیوندید. با گستره‌ی
+        وسیعی از مباحث و زبان‌های برنامه‌نویسی، سایت ما به شما امکان می‌دهد تا
+        به صورت یکپارچه و جامع با آنها آشنا شوید. از مبتدی تا پیشرفته، آموزش‌های
+        ما شما را در جهان رمز و رازهای برنامه‌نویسی همراهی می‌کند. با فراگیری
+        زبان‌های محبوب مانند Python، JavaScript، Ruby و PHP، می‌توانید
+        برنامه‌هایی قوی و کاربردی بسازید و وبسایت‌های خود را به ابعاد بالاتری
+        برسانید. در سایت ما، به شما آموزش‌های تصویری، مقالات جامع و نمونه‌های کد
+        قابل استفاده ارائه می‌دهیم. همچنین، با پروژه‌های عملی، شما می‌توانید
+        مفاهیم پیچیده را درک کنید و تجربه‌ی عملی را بدست آورید. اینجا برای شما
+        یک محیط آموزشی دوستانه و همچنین کاربردی فراهم کرده‌ایم. هدف ما این است
+        تا شما را در مسیر حرفه‌ای خود همراهی کنیم و مسیری را برای شما باز کنیم
+        که پر از امکانات و فرصت‌های پیشرفت است. یادگیری برنامه‌نویسی می‌تواند یک
+        سفر هیجان‌انگیز و پاداشمند باشد و ما اینجا هستیم تا شما را در این سفر
+        همراهی کنیم. پس بیایید با هم شروع کنیم و به جاده‌ی پیشرفت و خلاقیت در
+        دنیای برنامه‌نویسی پا بگذاریم. همراه با ما باشید و توانایی‌های جدیدی را
+        با یادگیری و تمرین به دست آورید. امیدوارم این مقدمه شما را به سمت جهانی
+        پر از امکانات برنامه‌نویسی هدایت کند. شما می‌توانید این متن را بر اساس
+        سلیقه و نیازهای خودتان ویرایش کنید و به شیوه‌ی منحصر به فرد خودتان ارائه
+        دهید.
+      </p>
+    </section>
+    <section id="sect3">
+      <img src="img/pexels-andrea-piacquadio-774909.jpg" class="pic1" />
+      <img src="img/pexels-italo-melo-2379005.jpg" alt="kevin" class="pic2" />
+      <img src="img/pexels-simon-robben-614810.jpg" alt="robben" class="pic3" />
+      <p class="about1">
+        سلام! من كارلا هستم، برنامه‌ نویسی با همت و انگیزه بالا. تخصص من در
+        توسعه برنامه‌های موبایل است، به ویژه برنامه‌های اندروید. با زبان‌های
+        مانند Java و Kotlin آشنایی دارم و توانایی ساخت برنامه‌های کاربردی و
+        البته زیبا را دارم. طراحی رابط کاربری منحصر به فرد و تجربه کاربری برتر
+        را در نظر دارم. همچنین، توانایی توسعه وبسایت‌های ریسپانسیو و پیاده‌سازی
+        تکنولوژی‌های جدید نیز در دسته مهارت‌های من قرار دارد. من یک عضو فعال تیم
+        هستم و از همکاری با افراد مختلف و به اشتراک گذاشتن ایده‌ها و تجربیاتم
+        لذت می‌برم. توانایی برقراری ارتباط موثر و هماهنگی با اعضای تیم را دارم و
+        به دنبال فرصت‌های جدیدی در دنیای برنامه‌نویسی هستم تا همچنان در حال رشد
+        و پیشرفت باشم.
+      </p>
+      <p class="about2">
+        سلام من كوين هستم، یک برنامه‌ نویس خلاق و خوشحالم که این شغل رو انتخاب
+        کردم. تجربه‌های طولانی در توسعه وبسایت‌های پویا و برنامه‌های قدرتمند رو
+        دارم. عاشق حل مسائل پیچیده با استفاده از کدنویسی هستم و همیشه به دنبال
+        بهترین راه حل‌ها هستم. با زبان‌های محبوبی مانند Python و JavaScript
+        آشنایی دارم و به توسعه‌دهنده‌ای قابل اعتماد و همکاری پرتوان تبدیل
+        شده‌ام. همچنین، توانایی ارتباط برقرار کردن با تیم و هماهنگی موثر رو دارم
+        و به خوبی در محیط‌های همکاری تیمی عمل می‌کنم
+      </p>
+      <p class="about3">
+        سلام دوستان من رابين هستم، برنامه‌ نویسی که به تولید کد و خلق برنامه‌های
+        منحصر به فرد علاقه‌مند است. با تجربه‌های بیشتر در زمینه توسعه نرم‌افزار،
+        به خوبی در زبان‌های متنوعی مانند C++، Java و Ruby مسلط هستم. علاقه‌مندی
+        من به طراحی الگوریتم‌های پیچیده و بهینه‌سازی کدها است. همیشه به دنبال
+        بهترین راه‌حل‌ها برای مسائل پیچیده هستم و از تکنولوژی‌های جدید استفاده
+        می‌کنم. به عنوان یک توسعه‌دهنده خلاق و مسئولیت‌پذیر، توانایی کار تیمی و
+        هماهنگی را دارم و به دنبال فرصت‌های جدیدی در دنیای برنامه‌نویسی هستم
+      </p>
+    </section>
+    <footer id="footer">
+      <a href="http://www.facebook.com"
+        ><img src="icon/facebook_2504903.png" class="icon-facebook"
+      /></a>
+      <a href="http://www.instagram.com">
+        <img src="icon/instagram_3955024.png" class="icon-instagram"
+      /></a>
+      <a href="http://www.youtube.com"
+        ><img src="icon/youtube_1384060.png" class="icon-youtube"
+      /></a>
+      <ul class="foot-list">
+        <li class="foot-item1">انتقادات و پيشنهادات</li>
+        <li class="foot-item2">تماس با ما</li>
+        <li class="foot-item3">قوانين ومقررات</li>
+      </ul>
+    </footer>
+    <footer class="creat-by">
+      <span>Design & Development by Mohammad Nj</span><br />
+      <p class="c1">www.njmohammad22-40.github.io</p>
+    </footer>
   </body>
 </html>
